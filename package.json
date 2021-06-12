@@ -1,0 +1,24 @@
+{
+  "name": "trip-planner-api",
+  "version": "1.0.0",
+  "description": "Project: a Trip Planner app REST API The JavaScript Full-Stack Bootcamp Flavio Copes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valladao/trip-planner-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valladao/trip-planner-api/issues"
+  },
+  "homepage": "https://github.com/valladao/trip-planner-api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.6.9"
+  }
+}
