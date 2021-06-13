@@ -1,4 +1,4 @@
-# trip-planner-api
+# Trip Planner REST API
 
 Project: a Trip Planner app REST API
 The JavaScript Full-Stack Bootcamp
