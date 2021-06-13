@@ -71,7 +71,14 @@ app.post("/expense", (req, res) => {
 })
 
 app.get("/expenses", (req, res) => {
-  /* */
+  expenses.find({ trip: req.body.trip }).toArray((err, items) => {
+    if (err) {
+      console.error(err)
+      res.status(500).json({ err: err })
+      return
+    }
+    res.status(200).json({ expenses: items })
+  })
 })
 
 app.listen(3000, () => console.log("Server ready"))
