@@ -4,7 +4,7 @@
   "description": "Project: a Trip Planner app REST API The JavaScript Full-Stack Bootcamp Flavio Copes",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "mongodb": "^3.6.9"
+  },
+  "devDependencies": {
+    "jest": "^27.2.4"
   }
 }
