@@ -23,6 +23,7 @@ mongo.connect(
     db = client.db("tripcost")
     trips = db.collection("trips")
     expenses = db.collection("expenses")
+    app.emit("appStarted")
   }
 )
 
@@ -81,4 +82,10 @@ app.get("/expenses", (req, res) => {
   })
 })
 
-app.listen(3000, () => console.log("Server ready"))
+const server = app.listen(3000, () => {
+  console.log("Server ready")
+})
+
+app.on("closeApp", () => server.close())
+
+module.exports = app
