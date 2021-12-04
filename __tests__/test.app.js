@@ -21,4 +21,13 @@ describe("Test trips API", () => {
       .expect(200)
       .end(done)
   })
+
+  it("should have the trip inserted in the database", async () => {
+    const res = await request(app).get("/trips")
+    expect(res.statusCode).toEqual(200)
+    expect(
+      res.body.trips.filter((item) => item.name === "Touring the Alps").length >
+        0
+    ).toEqual(true)
+  })
 })
