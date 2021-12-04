@@ -5,16 +5,12 @@ beforeAll(function (done) {
   app.on("appStarted", done)
 })
 
-afterAll(() => {
-  app.emit("closeApp")
-})
-
 describe("Test trips API", () => {
   it("should create a new trip", (done) => {
     request(app)
       .post("/trip")
       .send({
-        name: "Toring the Alps",
+        name: "Touring the Alps",
       })
       .set("Content-Type", "application/json")
       .set("Accept", "application/json")
@@ -30,4 +26,8 @@ describe("Test trips API", () => {
         0
     ).toEqual(true)
   })
+})
+
+afterAll(() => {
+  app.emit("closeApp")
 })
